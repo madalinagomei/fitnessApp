@@ -61,7 +61,6 @@
   margin: 5px;
   cursor: pointer;
   flex-shrink: 1;
-  /*flex-basis: 100px;*/
   border: 1px solid #000;
   display: flex;
   justify-content: center;
@@ -258,12 +257,14 @@ ul {
   position: absolute;
   width: 40%;
   height: 40%;
-
   background-size: contain;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/27/27223.png");
   background-repeat: no-repeat;
   top: 50%;
   left: 50%;
   opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
 }
 
 .video-item:hover {
@@ -291,7 +292,6 @@ ul {
   width: 800px;
   height: 40px;
   background-color: brown;
-  animation: newsScroll 13s linear infinite;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -299,6 +299,20 @@ ul {
   font-size: 18px;
   white-space: nowrap;
   overflow: hidden;
+  /*Your code goes here*/
+  animation: newsScroll 15s linear infinite;
+  /*---*/
+}
+
+/*Your code goes here*/
+@keyframes newsScroll {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 footer {
